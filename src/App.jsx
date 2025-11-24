@@ -43,7 +43,7 @@ function App() {
   const [selectedWindow, setSelectedWindow] = useState('w5')
 
   useEffect(() => {
-    fetch('/data/results.json')
+    fetch('./data/results.json')
       .then(res => {
         if (!res.ok) throw new Error('No se pudo cargar los datos')
         return res.json()
